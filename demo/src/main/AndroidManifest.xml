@@ -7,8 +7,8 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="17"
-        tools:overrideLibrary="android.support.v7.appcompat,android.support.graphics.drawavle"
+        android:targetSdkVersion="26"
+        tools:overrideLibrary="androidx.appcompat,android.support.graphics.drawavle"
         />
 
     <application
