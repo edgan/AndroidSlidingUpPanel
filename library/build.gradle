@@ -38,6 +38,10 @@ publishing {
         create("release", MavenPublication) {
             groupId = 'com.github.edgan'
             artifactId = 'AndroidSlidingUpPanel'
+
+            afterEvaluate {
+              from components.release
+            }
         }
     }
 }
