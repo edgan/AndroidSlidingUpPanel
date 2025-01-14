@@ -4,7 +4,7 @@ plugins {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -13,11 +13,31 @@ dependencies {
 }
 
 android {
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
     compileSdkVersion 28
     lintOptions {
         abortOnError false
     }
     namespace "com.sothree.slidinguppanel.library"
+
+    publishing {
+        singleVariant("release") {
+            // withSourcesJar()
+            // withJavadocJar()
+        }
+    }
 }
 
-//apply from: '../maven_push.gradle'
+
+publishing {
+    publications {
+        create("release", MavenPublication) {
+            groupId = 'com.github.edgan'
+            artifactId = 'AndroidSlidingUpPanel'
+        }
+    }
+}
