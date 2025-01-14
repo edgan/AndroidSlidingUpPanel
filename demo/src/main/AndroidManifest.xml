@@ -7,7 +7,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="26"
+        android:targetSdkVersion="33"
         tools:overrideLibrary="androidx.appcompat,android.support.graphics.drawavle"
         />
 
@@ -18,7 +18,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.sothree.slidinguppanel.demo.DemoActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
